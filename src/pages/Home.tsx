@@ -26,10 +26,10 @@ function Home(props: Props) {
       <div className="flex justify-center gap-4" >
         <form onSubmit={querySearch} >
 
-          <input className="border-2 max-w-xs p-2" onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          <input placeholder="Enter Profile Name" className="border-2 mr-4 max-w-xs p-2" onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             queryChanger(e.target.value);
           }} value={query} />
-          <button onClick={querySearch} className="border-2 p-2 bg-blue-100">Search</button>
+          <button onClick={querySearch} className="cursor-pointer ml-4 border-2 p-2 bg-blue-100">Search</button>
         </form>
 
       </div>
