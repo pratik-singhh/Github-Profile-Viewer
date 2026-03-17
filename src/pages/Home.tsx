@@ -1,9 +1,6 @@
-import { Link, useNavigate } from "react-router-dom"
-import Profile from "./Profile";
+import { useNavigate } from "react-router-dom"
 import { useState } from "react";
-type Props = {
-}
-function Home(props: Props) {
+function Home() {
   const [query, setQuery] = useState<string>("");
 
   const navigation = useNavigate();

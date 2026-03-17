@@ -1,69 +1,107 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 GitHub Profile Viewer
 
-Currently, two official plugins are available:
+A modern GitHub Profile Viewer built with React and TypeScript that allows users to search for any GitHub username and explore their profile and repositories.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌐 Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🔗 https://your-vercel-link.vercel.app
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* 🔍 Search GitHub users by username
+* 👤 View user profile (avatar, bio, followers, following)
+* 📦 Browse repositories
+* ⭐ See stars and primary language
+* 🔗 Direct link to GitHub repositories
+* 📄 Pagination for repositories
+* ⚡ Parallel API fetching for better performance
+* ⏳ Loading states for smooth UX
+
+---
+
+## 🛠️ Tech Stack
+
+* ⚛️ React
+* 📘 TypeScript
+* ⚡ Vite
+* 🎨 Tailwind CSS
+* 🌐 GitHub REST API
+
+---
+
+## 🧠 What I Learned
+
+* Building reusable components (`ProfileCard`, `RepoCard`, `RepoList`)
+* Creating custom hooks for data fetching
+* Handling multiple API calls in parallel
+* Managing loading states effectively
+* Structuring a scalable React application
+* Working with real-world APIs
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── ProfileCard.tsx
+│   ├── RepoCard.tsx
+│   └── RepoList.tsx
+├── hooks/
+│   └── useGithubProfile.ts
+├── services/
+│   └── GithubApi.ts
+├── types/
+│   ├── User.ts
+│   └── Repository.ts
+├── pages/
+│   └── Profile.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/your-username/github-profile-viewer.git
+cd github-profile-viewer
+npm install
+npm run dev
 ```
+
+---
+
+## 🚀 Future Improvements
+
+* 🔃 Sort repositories (stars, updated)
+* 🧪 Add error handling UI
+* 📱 Improve mobile responsiveness
+* 🌈 Enhance UI/UX with animations
+* 🔍 Add search suggestions
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repo and improve it!
+
+---
+
+## 📜 License
+
+This project is open source and available under the MIT License.
+
+---
+
+## 🙌 Acknowledgements
+
+* GitHub REST API
+* Open source community
+
+---

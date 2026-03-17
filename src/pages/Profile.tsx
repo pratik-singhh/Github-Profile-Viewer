@@ -1,10 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import ProfileCard from "../components/ProfileCard";
-import { getUser } from "../services/GithubApi";
-import type { user } from "../types/User";
-import type { repo } from "../types/Repository";
 import useGithubProfile from "../hooks/useGithubProfile";
-import RepoCard from "../components/RepoCard";
 import RepoList from "../components/RepoList";
 
 function Profile() {
@@ -35,10 +31,10 @@ function Profile() {
 
       <div className="flex justify-center gap-5 ">
 
-        <button disabled={page === 1} onClick={(e) => setPage((p) => p - 1)} className="cursor-pointer border-2 bg-green-200 p-2">
+        <button disabled={page === 1} onClick={() => setPage((p) => p - 1)} className="cursor-pointer border-2 bg-green-200 p-2">
           Prev
         </button>
-        <button onClick={(e) => setPage((p) => p + 1)} className="border-2 bg-green-200 cursor-pointer p-2">
+        <button disabled={repo.length < 10} onClick={() => setPage((p) => p + 1)} className="border-2 bg-green-200 cursor-pointer p-2">
           Next
         </button>
       </div>
