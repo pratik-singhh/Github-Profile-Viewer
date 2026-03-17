@@ -7,7 +7,7 @@ A modern GitHub Profile Viewer built with React and TypeScript that allows users
 
 ## 🌐 Live Demo
 
-🔗 https://your-vercel-link.vercel.app
+🔗 https://github-profile-viewer-eight-tan.vercel.app/
 
 ---
 
