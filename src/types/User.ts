@@ -1,9 +1,10 @@
 export type user = {
-
-  avatar_url: string
-  name: string
-  bio: string
-  followers: number
-  following: number
-  html_url: string
+  login: string;
+  avatar_url: string;
+  name: string;
+  bio: string | null;
+  followers: number;
+  following: number;
+  public_repos: number;
+  html_url: string;
 }

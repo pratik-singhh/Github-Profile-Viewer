@@ -1,10 +1,10 @@
 
 export type repo = {
-
-  name: string
-  description: string
-  stargazers_count: number
-  language: string
   id: number;
-  html_url: string
+  name: string;
+  description: string | null;
+  stargazers_count: number;
+  language: string | null;
+  visibility: string;
+  html_url: string;
 }
